@@ -40,7 +40,7 @@ router.post('/login', (req, res) => {
 
 router.get('/logout', (req, res) => {
     if (req.session) {
-        req.session.destory(error => {
+        req.session.destroy(error => {
             if (error) {
                 res.status(500).json({ message: 'do not leave, beucase you cannot' })
             } else {
